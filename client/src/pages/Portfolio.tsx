@@ -52,7 +52,7 @@ export default function Portfolio() {
         onToggleDarkMode={toggleDarkMode}
       />
 
-      <main>
+      <main className='overflow-y-hidden'>
         <div className="relative">
           <ThreeBackground reducedMotion={reducedMotion} />
           <Hero reducedMotion={reducedMotion} />
