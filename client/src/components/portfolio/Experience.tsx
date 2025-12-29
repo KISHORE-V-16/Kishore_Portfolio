@@ -12,7 +12,7 @@ const academics = [
     degree: 'B.Tech Computer Science & Engineering',
     institution: 'NIT Tiruchirappalli',
     period: '2022 - Present',
-    grade: 'CGPA: 8.30',
+    grade: 'CGPA: 8.29',
     icon: GraduationCap,
     gradient: 'from-blue-500 to-indigo-600',
   },

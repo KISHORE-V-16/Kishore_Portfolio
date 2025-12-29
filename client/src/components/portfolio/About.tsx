@@ -44,7 +44,7 @@ export default function About() {
 
   return (
     // --- BACKGROUND: Pure Black ---
-    <section ref={ref} id="about" className="relative py-32 px-6 overflow-hidden-y bg-black" data-testid="section-about">
+    <section ref={ref} id="about" className="relative py-32 px-6 overflow-hidden bg-black" data-testid="section-about">
       
       {/* --- BACKGROUND ICONS --- */}
       <div className="absolute top-0 inset-x-0 h-[500px] pointer-events-none overflow-hidden select-none z-0">
@@ -90,17 +90,16 @@ export default function About() {
                 </div>
                 The Narrative
               </h3>
-              
-              {/* --- UPDATED NARRATIVE CONTENT --- */}
+            
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed relative z-10">
                 <p>
-                  I am a Computer Science student at <span className="text-white font-medium border-b border-violet-500/30">NIT Trichy</span>, dedicated to building innovative and scalable full-stack applications.
+                  I am a Computer Science student at <span className="text-white font-medium border-b border-violet-500/30">NIT Trichy</span>, engineering scalable web solutions using <span className="text-cyan-300 font-medium">React, Node.js, and Express</span> backed by robust <span className="text-white font-medium">C/C++</span> fundamentals.
                 </p>
                 <p>
-                  With a technical foundation in <span className="text-white font-medium">JavaScript, C, and C++</span>, I specialize in architecting cloud-native solutions using <span className="text-cyan-300 font-medium">Docker, Kubernetes, AWS, and GCP</span>. My passion lies in solving complex database challenges and creating efficient, high-performance systems.
+                  I specialize in deploying production-ready systems with <span className="text-cyan-300 font-medium">Docker, Kubernetes, AWS, and GCP</span>, ensuring performance and reliability.
                 </p>
                 <p>
-                  Beyond the code, I find balance through painting, playing the keyboard, and badminton. I am constantly seeking new technologies to master and meaningful projects where I can make a tangible impact.
+                  Beyond the code, I find balance through painting, playing the keyboard, and badminton. <span className='text-white font-medium'>I am constantly seeking new technologies to master and meaningful projects</span> where I can make a tangible impact.
                 </p>
               </div>
             </div>
