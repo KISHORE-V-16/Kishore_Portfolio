@@ -49,7 +49,7 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
     setIsMobileMenuOpen(false);
   };
 
-  const placeholder = '../public/favicon.png';
+  const placeholder = '/favicon.png';
   const imgSrc = profileImageUrl ?? placeholder;
 
   return (
