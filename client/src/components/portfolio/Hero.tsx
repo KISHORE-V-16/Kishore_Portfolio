@@ -32,7 +32,7 @@ function CodeforcesIcon(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-// CodeChef: Thick White "CC", Spaced Out, No Square
+// CodeChef: Thick White "CC"
 function CodeChefIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg 
@@ -44,9 +44,7 @@ function CodeChefIcon(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin="round" 
       {...props}
     >
-       {/* Left C - Enlarged and moved */}
        <path d="M10 6C6 6 4 9 4 12C4 15 6 18 10 18" />
-       {/* Right C - Enlarged and moved */}
        <path d="M20 6C16 6 14 9 14 12C14 15 16 18 20 18" />
     </svg>
   );
@@ -177,7 +175,7 @@ export default function Hero({ reducedMotion }: HeroProps) {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-            <span className="text-foreground/80 block mb-2 text-4xl md:text-5xl">Hi, I'm</span>
+            <span className="text-zinc-200 block mb-2 text-4xl md:text-5xl">Hi, I'm</span>
             <span className="bg-gradient-to-r from-violet-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient font-extrabold drop-shadow-sm">
               Kishore V
             </span>
@@ -200,7 +198,7 @@ export default function Hero({ reducedMotion }: HeroProps) {
             <Button
               variant="outline"
               size="lg"
-              className="h-12 px-8 rounded-full border-violet-500/30 hover:border-violet-500 bg-background/50 hover:bg-violet-500/10 backdrop-blur-sm transition-all hover:scale-105"
+              className="h-12 px-8 rounded-full border-violet-500/30 hover:border-violet-500 bg-white/5 hover:bg-violet-500/10 backdrop-blur-sm text-white transition-all hover:scale-105"
               onClick={() => scrollToSection('#contact')}
             >
               Get in Touch
@@ -216,7 +214,6 @@ export default function Hero({ reducedMotion }: HeroProps) {
 
             <SocialLink href="https://leetcode.com/u/KISHORE__V/" icon={LeetCodeIcon} color="amber" />
             <SocialLink href="https://codeforces.com/profile/kishore__V" icon={CodeforcesIcon} color="blue" />
-            {/* BROWN THEME with WHITE "CC" spaced out */}
             <SocialLink href="https://www.codechef.com/users/kishore_v_26" icon={CodeChefIcon} color="brown" />
           </div>
         </div>
@@ -228,7 +225,7 @@ export default function Hero({ reducedMotion }: HeroProps) {
 
        <button
         onClick={() => scrollToSection('#about')}
-        className={`absolute bottom-5 left-1/2 -translate-x-1/2 p-3 rounded-full border border-white/5 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all text-muted-foreground hover:text-white animate-bounce z-20`}
+        className={`absolute bottom-5 left-1/2 -translate-x-1/2 p-3 rounded-full border border-white/5 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all text-zinc-400 hover:text-white animate-bounce z-20`}
       >
         <ArrowDown className="w-5 h-5" />
       </button>

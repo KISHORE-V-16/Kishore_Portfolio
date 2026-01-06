@@ -69,7 +69,7 @@ export default function About() {
           </div>
           
           <h2 className={`mt-8 text-4xl md:text-6xl font-bold tracking-tight transition-all duration-1000 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <span className="block text-foreground/90 mb-2">Driven by</span>
+            <span className="block text-zinc-200 mb-2">Driven by</span>
             <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(139,92,246,0.2)]">
               Innovation & Code
             </span>
@@ -84,13 +84,13 @@ export default function About() {
               
               <div className="absolute inset-0 bg-gradient-to-br from-violet-500/10 via-transparent to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
-              <h3 className="text-2xl font-semibold text-foreground flex items-center gap-3 mb-6 relative z-10">
+              <h3 className="text-2xl font-semibold text-white flex items-center gap-3 mb-6 relative z-10">
                 <div className="p-2.5 rounded-xl bg-violet-500/20 text-violet-300 border border-violet-500/20">
                     <Code className="w-6 h-6" />
                 </div>
                 The Narrative
               </h3>
-            
+              
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed relative z-10">
                 <p>
                   I am a Computer Science student at <span className="text-white font-medium border-b border-violet-500/30">NIT Trichy</span>, engineering scalable web solutions using <span className="text-cyan-300 font-medium">React, Node.js, and Express</span> backed by robust <span className="text-white font-medium">C/C++</span> fundamentals.
@@ -114,10 +114,10 @@ export default function About() {
                   }`}
                   style={{ transitionDelay: `${300 + index * 100}ms` }}
                 >
-                  <div className={`p-2 rounded-lg bg-background/50 ${item.color}`}>
+                  <div className={`p-2 rounded-lg bg-black/20 ${item.color}`}>
                     <item.icon className="w-5 h-5" />
                   </div>
-                  <span className="text-sm font-medium text-foreground/90">{item.text}</span>
+                  <span className="text-sm font-medium text-zinc-300">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -126,7 +126,7 @@ export default function About() {
           {/* --- RIGHT COLUMN: ACHIEVEMENTS --- */}
           <div className="md:col-span-5 flex flex-col gap-6 relative">
             
-            <h3 className={`text-3xl font-bold text-foreground flex items-center gap-4 mb-4 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <h3 className={`text-3xl font-bold text-white flex items-center gap-4 mb-4 transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
               <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg shadow-amber-500/20 relative z-10">
                 <Crown className="w-5 h-5 text-white" />
               </span>
@@ -158,10 +158,10 @@ export default function About() {
                   </div>
                   
                   <div>
-                    <h4 className="font-bold text-lg text-foreground mb-1 group-hover:text-white transition-colors">
+                    <h4 className="font-bold text-lg text-white mb-1 group-hover:text-white transition-colors">
                         {achievement.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground group-hover:text-white/70 transition-colors">
+                    <p className="text-sm text-zinc-400 group-hover:text-white/70 transition-colors">
                         {achievement.description}
                     </p>
                   </div>

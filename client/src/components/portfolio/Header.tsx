@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Moon, Sun, Eye, EyeOff } from 'lucide-react';
+import { Menu, X, Eye, EyeOff } from 'lucide-react';
 
 interface HeaderProps {
   reducedMotion: boolean;
@@ -20,7 +20,7 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export default function Header({ reducedMotion, onToggleMotion, darkMode, onToggleDarkMode, profileImageUrl }: HeaderProps) {
+export default function Header({ reducedMotion, onToggleMotion, profileImageUrl }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
@@ -56,7 +56,7 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'py-3 bg-background/80 backdrop-blur-lg border-b border-border'
+          ? 'py-3 bg-black/80 backdrop-blur-lg border-b border-white/10'
           : 'py-5 bg-transparent'
       }`}
       data-testid="header"
@@ -65,7 +65,7 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
         <div className="flex items-center gap-3">
           <button
             onClick={() => setIsProfileOpen(true)}
-            className="relative w-10 h-10 rounded-full overflow-hidden ring-1 ring-border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0066FF]"
+            className="relative w-10 h-10 rounded-full overflow-hidden ring-1 ring-white/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0066FF]"
             aria-label="Open profile image"
             title="Open profile image"
             data-testid="button-open-profile"
@@ -102,7 +102,7 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
                 e.preventDefault();
                 scrollToSection(item.href);
               }}
-              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative group"
+              className="px-4 py-2 text-sm font-medium text-zinc-400 hover:text-white transition-colors relative group"
               data-testid={`link-nav-${item.label.toLowerCase()}`}
             >
               {item.label}
@@ -116,28 +116,17 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
             variant="ghost"
             size="icon"
             onClick={onToggleMotion}
-            className="text-muted-foreground"
+            className="text-zinc-400 hover:text-white hover:bg-white/10"
             aria-label={reducedMotion ? 'Enable animations' : 'Reduce motion'}
             data-testid="button-toggle-motion"
           >
             {reducedMotion ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
           </Button>
 
-          {/* <Button
-            variant="ghost"
-            size="icon"
-            onClick={onToggleDarkMode}
-            className="text-muted-foreground"
-            aria-label={darkMode ? 'Light mode' : 'Dark mode'}
-            data-testid="button-toggle-theme"
-          >
-            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-          </Button> */}
-
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-muted-foreground"
+            className="md:hidden text-zinc-400 hover:text-white hover:bg-white/10"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
             data-testid="button-mobile-menu"
@@ -149,7 +138,7 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
 
       {isMobileMenuOpen && (
         <nav
-          className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border py-4"
+          className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-b border-white/10 py-4"
           data-testid="nav-mobile"
         >
           {navItems.map((item) => (
@@ -160,7 +149,7 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
                 e.preventDefault();
                 scrollToSection(item.href);
               }}
-              className="block px-6 py-3 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+              className="block px-6 py-3 text-sm font-medium text-zinc-400 hover:text-white hover:bg-white/5 transition-colors"
               data-testid={`link-nav-mobile-${item.label.toLowerCase()}`}
             >
               {item.label}
@@ -183,7 +172,7 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
           .profile-image-zoom:hover { transform: scale(1.03); }
           `}</style>
 
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/80" />
 
           <div
             className="relative max-w-[95vw] max-h-[95vh] rounded-2xl overflow-hidden shadow-2xl profile-modal-enter"
@@ -191,10 +180,10 @@ export default function Header({ reducedMotion, onToggleMotion, darkMode, onTogg
           >
             <button
               onClick={() => setIsProfileOpen(false)}
-              className="absolute top-3 right-3 z-10 rounded-full p-2 bg-white/90 backdrop-blur-sm hover:scale-105 transition-transform focus:outline-none"
+              className="absolute top-3 right-3 z-10 rounded-full p-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all focus:outline-none"
               aria-label="Close profile"
             >
-              <X className="w-5 h-5 text-black" />
+              <X className="w-5 h-5 text-white" />
             </button>
 
             <img
