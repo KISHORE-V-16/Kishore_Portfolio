@@ -43,7 +43,7 @@ export default function About() {
   }, []);
 
   return (
-    // --- BACKGROUND: Slightly lighter than pure black (Zinc 950) ---
+    // --- BACKGROUND: Pure Black ---
     <section ref={ref} id="about" className="relative py-32 px-6 overflow-hidden bg-zinc-950" data-testid="section-about">
       
       {/* --- BACKGROUND ICONS --- */}
@@ -61,7 +61,7 @@ export default function About() {
           <div className={`inline-block transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="relative inline-flex group">
                 <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-violet-500 via-pink-500 to-cyan-500 rounded-full blur-md group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-                <Badge className="relative bg-zinc-950 text-white px-6 py-2 rounded-full border border-white/10 text-sm tracking-wide uppercase">
+                <Badge className="relative bg-black text-white px-6 py-2 rounded-full border border-white/10 text-sm tracking-wide uppercase">
                     <Sparkles className="w-4 h-4 mr-2 text-violet-400 animate-pulse" />
                     About The Developer
                 </Badge>
@@ -91,13 +91,15 @@ export default function About() {
                 The Narrative
               </h3>
               
-              {/* --- UPDATED NARRATIVE CONTENT (SHRUNK & PROFESSIONAL) --- */}
-              <div className="space-y-6 text-lg text-zinc-400 leading-relaxed relative z-10">
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed relative z-10">
                 <p>
                   I am a Computer Science student at <span className="text-white font-medium border-b border-violet-500/30">NIT Trichy</span>, engineering scalable web solutions using <span className="text-cyan-300 font-medium">React, Node.js, and Express</span> backed by robust <span className="text-white font-medium">C/C++</span> fundamentals.
                 </p>
                 <p>
-                  I specialize in deploying production-ready systems with <span className="text-white font-medium">Docker, Kubernetes, AWS, and GCP</span>, ensuring performance and reliability. Beyond code, I stay creative through painting and badminton, always ready for the next impactful challenge.
+                  I specialize in deploying production-ready systems with <span className="text-cyan-300 font-medium">Docker, Kubernetes, AWS, and GCP</span>, ensuring performance and reliability.
+                </p>
+                <p>
+                  Beyond the code, I find balance through painting, playing the keyboard, and badminton. <span className='text-white font-medium'>I am constantly seeking new technologies to master and meaningful projects</span> where I can make a tangible impact.
                 </p>
               </div>
             </div>
@@ -112,7 +114,7 @@ export default function About() {
                   }`}
                   style={{ transitionDelay: `${300 + index * 100}ms` }}
                 >
-                  <div className={`p-2 rounded-lg bg-white/5 ${item.color}`}>
+                  <div className={`p-2 rounded-lg bg-black/20 ${item.color}`}>
                     <item.icon className="w-5 h-5" />
                   </div>
                   <span className="text-sm font-medium text-zinc-300">{item.text}</span>
@@ -142,7 +144,7 @@ export default function About() {
             {achievements.map((achievement, index) => (
               <Card
                 key={index}
-                className={`relative ml-0 md:ml-12 overflow-hidden border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-500 group hover:-translate-y-1 hover:bg-white/5 ${
+                className={`relative ml-0 md:ml-12 overflow-hidden border border-white/5 bg-black/20 backdrop-blur-xl transition-all duration-500 group hover:-translate-y-1 hover:bg-white/5 ${
                   isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
                 }`}
                 style={{ transitionDelay: `${500 + index * 150}ms` }}

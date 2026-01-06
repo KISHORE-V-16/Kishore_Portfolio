@@ -56,7 +56,7 @@ export default function Header({ reducedMotion, onToggleMotion, profileImageUrl 
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'py-3 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10'
+          ? 'py-3 bg-black/80 backdrop-blur-lg border-b border-white/10'
           : 'py-5 bg-transparent'
       }`}
       data-testid="header"
@@ -138,7 +138,7 @@ export default function Header({ reducedMotion, onToggleMotion, profileImageUrl 
 
       {isMobileMenuOpen && (
         <nav
-          className="md:hidden absolute top-full left-0 right-0 bg-zinc-950/95 backdrop-blur-lg border-b border-white/10 py-4"
+          className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-b border-white/10 py-4"
           data-testid="nav-mobile"
         >
           {navItems.map((item) => (
@@ -189,7 +189,7 @@ export default function Header({ reducedMotion, onToggleMotion, profileImageUrl 
             <img
               src={imgSrc}
               alt="Full profile"
-              className="block max-w-full max-h-[80vh] object-contain bg-zinc-950 profile-image-zoom"
+              className="block max-w-full max-h-[80vh] object-contain bg-black profile-image-zoom"
               draggable={false}
             />
           </div>

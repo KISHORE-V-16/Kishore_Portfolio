@@ -142,7 +142,7 @@ export default function Hero({ reducedMotion }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[100vh] flex items-center justify-center px-6 overflow-hidden py-20 lg:py-0 perspective-1000 bg-zinc-950"
+      className="relative min-h-[100vh] flex items-center justify-center px-6 overflow-hidden py-20 lg:py-0 perspective-1000 bg-black"
       data-testid="section-hero"
     >
       <div 
@@ -168,7 +168,7 @@ export default function Hero({ reducedMotion }: HeroProps) {
            
           <div className="relative inline-flex group mb-8">
                 <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-violet-500 via-pink-500 to-cyan-500 rounded-full blur-md group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-                <Badge className="relative bg-zinc-950 text-white px-6 py-2 rounded-full border border-white/10 text-sm tracking-wide uppercase">
+                <Badge className="relative bg-black text-white px-6 py-2 rounded-full border border-white/10 text-sm tracking-wide uppercase">
                     <Sparkles className="w-4 h-4 mr-2 text-violet-400 animate-pulse" />
                     Available for New Projects
                 </Badge>
