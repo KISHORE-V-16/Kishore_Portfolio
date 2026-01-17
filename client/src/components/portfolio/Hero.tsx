@@ -142,7 +142,7 @@ export default function Hero({ reducedMotion }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[100vh] flex items-center justify-center px-6 overflow-hidden py-20 lg:py-0 perspective-1000 bg-black"
+      className="relative min-h-[100vh] flex items-center justify-center px-6 overflow-hidden py-20 lg:py-0 perspective-1000 bg-zinc-950"
       data-testid="section-hero"
     >
       <div 

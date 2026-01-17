@@ -181,7 +181,7 @@ export default function Contact() {
   };
 
   return (
-    <section ref={ref} id="contact" className="relative py-24 px-6 overflow-hidden bg-black" data-testid="section-contact">
+    <section ref={ref} id="contact" className="relative py-24 px-6 overflow-hidden bg-zinc-950" data-testid="section-contact">
       
       <ContactBackgroundIcons />
 

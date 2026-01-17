@@ -385,7 +385,7 @@ export default function Experience() {
 
   return (
     // --- MAIN BACKGROUND: PURE BLACK ---
-    <section ref={ref} id="experience" className="relative py-32 px-6 overflow-hidden bg-black" data-testid="section-experience">
+    <section ref={ref} id="experience" className="relative py-32 px-6 overflow-hidden bg-zinc-950" data-testid="section-experience">
       
       {/* --- DISTRIBUTED BACKGROUND ICONS --- */}
       <CareerBackgroundIcons />

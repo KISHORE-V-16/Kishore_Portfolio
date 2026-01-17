@@ -85,7 +85,7 @@ export default function Footer({ reducedMotion }: FooterProps) {
 
   return (
     // --- MAIN BACKGROUND: PURE BLACK ---
-    <footer className="relative py-12 px-6 border-t border-zinc-800 overflow-hidden bg-black" data-testid="footer">
+    <footer className="relative py-12 px-6 border-t border-zinc-800 overflow-hidden bg-zinc-950" data-testid="footer">
       
       {/* --- ADDED: MINIMAL BACKGROUND ICONS --- */}
       <FooterBackgroundIcons />

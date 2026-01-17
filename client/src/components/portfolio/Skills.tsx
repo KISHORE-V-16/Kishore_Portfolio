@@ -178,7 +178,7 @@ export default function Skills() {
 
   return (
     // --- MAIN BACKGROUND: PURE BLACK ---
-    <section ref={ref} id="skills" className="relative py-24 px-6 overflow-hidden bg-black" data-testid="section-skills">
+    <section ref={ref} id="skills" className="relative py-24 px-6 overflow-hidden bg-zinc-950" data-testid="section-skills">
       
       {/* --- ADDED: DISTRIBUTED BACKGROUND ICONS --- */}
       <SkillsBackgroundIcons />

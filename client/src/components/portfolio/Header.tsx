@@ -56,7 +56,7 @@ export default function Header({ reducedMotion, onToggleMotion, profileImageUrl 
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'py-3 bg-black/80 backdrop-blur-lg border-b border-white/10'
+          ? 'py-3 bg-zinc-950/80 backdrop-blur-lg border-b border-white/10'
           : 'py-5 bg-transparent'
       }`}
       data-testid="header"

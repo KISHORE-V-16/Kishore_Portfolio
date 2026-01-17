@@ -447,7 +447,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section ref={ref} id="projects" className="relative py-32 px-6 overflow-hidden bg-black" data-testid="section-projects">
+    <section ref={ref} id="projects" className="relative py-32 px-6 overflow-hidden bg-zinc-950" data-testid="section-projects">
       
       <DistributedBackgroundIcons />
 
